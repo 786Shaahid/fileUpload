@@ -1,0 +1,117 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f9;
+}
+
+/* Drop zone styling */
+.dropzone {
+    border: 2px dashed #6c757d;
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+    background-color: #e9ecef;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.dropzone.dragover {
+    background-color: #cce5ff;
+    border-color: #0056b3;
+}
+
+.dropzone p {
+    margin: 0;
+    color: #6c757d;
+    font-size: 18px;
+}
+
+/* File list styling */
+.file-list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.file-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.file-item textarea {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    resize: none;
+    font-size: 14px;
+    height: 80px;
+}
+
+.file-item .check-icon,
+.file-item .delete-icon {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.file-item .check-icon:hover,
+.file-item .delete-icon:hover {
+    color: #007bff;
+}
+
+/* Carousel styling */
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+    background-color: #000;
+    border-radius: 10px;
+}
+
+.carousel-item {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .dropzone {
+        padding: 20px;
+    }
+
+    .file-item img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .file-item textarea {
+        font-size: 12px;
+        height: 60px;
+    }
+}
